@@ -118,7 +118,11 @@ if __name__ == '__main__':
     scaler_all.fit(all_data)
     # all_data = scaler_all.transform(all_data)
     
-    
+    #####################
+    ## Producing train and test dictionary of all patients
+    ##  80 percent of each patient data is selected for train and the rest is for test
+    ## 
+    #####################
     datatrain_dic = {}
     datatest_dic = {}
     
@@ -140,7 +144,11 @@ if __name__ == '__main__':
     print(patients_test)
     
 
-    
+    #####################
+    ## Producing sampples for training from each patient
+    ## The window step is set to 5
+    ## samples are saved into test and train folders
+    #####################
     # step = 5
     # for i in range(len(datatrain_dic)):
     #     data = datatrain_dic[patients_train[i]]
